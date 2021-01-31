@@ -1,5 +1,5 @@
 ### Hi there 👋
-![Metrics](https://github.com/sungminoh/sungminoh/blob/master/github-metrics.svg)
+![Metrics](https://metrics.lecoq.io/sungminoh)
 <!--
 **sungminoh/sungminoh** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
