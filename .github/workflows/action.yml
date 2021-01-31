@@ -37,17 +37,17 @@ inputs:
   # GitHub username
   user:
     description: GitHub username
-    default: ""
+    default: sungminoh
   
   # Set to "${{ secrets.GITHUB_TOKEN }}"
   committer_token:
     description: GitHub Token used to commit metrics
-    default: ""
+    default: "${{ secrets.GITHUB_TOKEN }}"
   
   # Branch used to commit rendered metrics
   committer_branch:
     description: Branch used to commit rendered metrics
-    default: ""
+    default: master
   
   # Rendered metrics output path, relative to repository's root
   filename:
@@ -61,9 +61,9 @@ inputs:
     default: yes
   
   # Setup additional templates from remote repositories
-  setup_community_templates:
-    description: Additional community templates to setup
-    default: ""
+#   setup_community_templates:
+#     description: Additional community templates to setup
+#     default: ""
   
   # Template to use
   # To use community template, prefix its name with "@"
@@ -74,22 +74,22 @@ inputs:
   # Additional query parameters (JSON string)
   # Some templates may require additional parameters which you can specify here
   # Do not use this option to pass plugins parameters as they'll be overwritten by the other options
-  query:
-    description: Additional query parameters
-    default: "{}"
+#   query:
+#     description: Additional query parameters
+#     default: "{}"
   
   # Timezone used by metrics
   # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   config_timezone:
     description: Timezone used
-    default: ""
+    default: "US/Pacific"
   
   # Specify in which order metrics content will be displayed
   # If you omit some partials, they'll be appended at the end in default order
   # See "partials/_.json" of each template for a list of supported partials
-  config_order:
-    description: Configure content order
-    default: ""
+#   config_order:
+#     description: Configure content order
+#     default: ""
   
   # Enable SVG CSS animations
   config_animations:
@@ -142,9 +142,9 @@ inputs:
   
   # Use a pre-built image from GitHub registry (experimental)
   # See https://github.com/users/lowlighter/packages/container/package/metrics for more information
-  use_prebuilt_image:
-    description: Use pre-built image from GitHub registry
-    default: ""
+#   use_prebuilt_image:
+#     description: Use pre-built image from GitHub registry
+#     default: ""
   
   # ====================================================================================
   # 📰 Recent activity
@@ -274,14 +274,14 @@ inputs:
     default: no
   
   # List of languages that will be ignored
-  plugin_languages_ignored:
-    description: Languages to ignore
-    default: ""
+#   plugin_languages_ignored:
+#     description: Languages to ignore
+#     default: ""
   
   # List of repositories that will be skipped
-  plugin_languages_skipped:
-    description: Repositories to skip
-    default: ""
+#   plugin_languages_skipped:
+#     description: Repositories to skip
+#     default: ""
   
   # Overrides
   # Use `${n}:${color}` to change the color of the n-th most used language (e.g. "0:red" to make your most used language red)
@@ -311,33 +311,33 @@ inputs:
   # Name of music provider
   # This is optional for "playlist" mode (it can be deduced automatically from "plugin_music_playlist" url)
   # This is required in other modes
-  plugin_music_provider:
-    description: Music provider
-    default: ""
+#   plugin_music_provider:
+#     description: Music provider
+#     default: ""
   
   # Music provider token
   # This may be required depending on music provider used and plugin mode
   # - "apple"   : not required
   # - "spotify" : required for "recent" mode, format is "client_id, client_secret, refresh_token"
   # - "lastfm"  : required, format is "api_key"
-  plugin_music_token:
-    description: Music provider personal token
-    default: ""
+#   plugin_music_token:
+#     description: Music provider personal token
+#     default: ""
   
   # Plugin mode
-  plugin_music_mode:
-    description: Plugin mode
-    default: ""
+#   plugin_music_mode:
+#     description: Plugin mode
+#     default: ""
   
   # Embed playlist url (i.e. url used by music player iframes)
-  plugin_music_playlist:
-    description: Embed playlist url
-    default: ""
+#   plugin_music_playlist:
+#     description: Embed playlist url
+#     default: ""
   
   # Number of music tracks to display
-  plugin_music_limit:
-    description: Maximum number of tracks to display
-    default: 4
+#   plugin_music_limit:
+#     description: Maximum number of tracks to display
+#     default: 4
   
   # Username on music provider service
   plugin_music_user:
@@ -373,9 +373,9 @@ inputs:
   # PageSpeed API token
   # This is optional, but providing it will avoid hitting rate-limiter
   # See https://developers.google.com/speed/docs/insights/v5/get-started for more informations
-  plugin_pagespeed_token:
-    description: PageSpeed token
-    default: ""
+#   plugin_pagespeed_token:
+#     description: PageSpeed token
+#     default: ""
   
   # ====================================================================================
   # 🧑‍🤝‍🧑 People plugin
@@ -403,9 +403,9 @@ inputs:
   
   # When displaying "thanks" section, specified users list will be displayed
   # This is useful to craft "Special thanks" badges
-  plugin_people_thanks:
-    description: GitHub users to personally thanks
-    default: ""
+#   plugin_people_thanks:
+#     description: GitHub users to personally thanks
+#     default: ""
   
   # Use GitHub identicons instead of users' avatar (for privacy purposes)
   plugin_people_identicons:
@@ -421,9 +421,9 @@ inputs:
     default: no
   
   # Posts external source
-  plugin_posts_source:
-    description: Posts external source
-    default: ""
+#   plugin_posts_source:
+#     description: Posts external source
+#     default: ""
   
   # Number of posts to display
   plugin_posts_limit:
@@ -452,9 +452,9 @@ inputs:
   
   # List of repository projects to display, using the following format:
   # :user/:repo/projects/:project_id
-  plugin_projects_repositories:
-    description: List of repository project identifiers to disaplay
-    default: ""
+#   plugin_projects_repositories:
+#     description: List of repository project identifiers to disaplay
+#     default: ""
   
   # Display projects descriptions
   plugin_projects_descriptions:
@@ -525,9 +525,9 @@ inputs:
   
   # Twitter API token
   # See https://apps.twitter.com for more informations
-  plugin_tweets_token:
-    description: Twitter API token
-    default: ""
+#   plugin_tweets_token:
+#     description: Twitter API token
+#     default: ""
   
   # Number of tweets to display
   plugin_tweets_limit:
