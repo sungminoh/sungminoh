@@ -552,6 +552,9 @@ branding:
 # The action will parse its name to check if it's the official action or if it's a forked one
 # On the official action, it'll use the docker image published on GitHub registry when using a released version, allowing faster runs
 # On a forked action, it'll rebuild the docker image from Dockerfile to take into account changes you made
+on:
+  schedule:
+    - 0 * * * *
 runs:
   using: composite
   steps:
