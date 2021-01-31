@@ -554,7 +554,7 @@ branding:
 # On a forked action, it'll rebuild the docker image from Dockerfile to take into account changes you made
 on:
   schedule:
-    - 0 * * * *
+      - cron: '0 * * * *'
 runs:
   using: composite
   steps:
